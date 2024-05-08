@@ -1,0 +1,3 @@
+#Ignorar dependencias a ser enviada para o github
+node_modules
+.env
