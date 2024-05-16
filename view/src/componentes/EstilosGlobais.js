@@ -8,19 +8,20 @@ const EstilosGlobais = createGlobalStyle `
     }
 
     body{
-        background: #000000;
+        background: #0C0B0B;
         overflow-x: hidden;
         text-decoration: none;
     }
 
     button{
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1rem;
         cursor: pointer;
-        padding: 1rem 2rem;
+        padding: 0.5rem 2rem;
         background: #F93D02;
         color: white;
         border: 3px solid white;
+        border-radius: 3px;
         transition: all 0.5s ease;
         &:hover{
             background-color: black;
@@ -39,6 +40,7 @@ const EstilosGlobais = createGlobalStyle `
     span{
         font-weight: lighter;
         color: #416CD5;
+    
     }
 
     p{
