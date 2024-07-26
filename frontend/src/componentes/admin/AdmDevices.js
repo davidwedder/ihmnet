@@ -7,7 +7,8 @@ import {useApi} from '../../hooks/useApi'
 import moment from 'moment'
 import CaixaDialogo from './CaixaDialogo'
 import FormEdit from './FormEdit'
-import {deleteRegistro, editRegistro} from '../../services/api'
+import {deleteRegistro, editRegistro, putmedidas} from '../../services/api'
+
 
 const Foto = styled(Image)`
     height: 50px;
@@ -21,6 +22,7 @@ const AdmDevices = ()=>{
     const userData = jwtDecode(Userfront.idToken())
     const emailF = userData.email
     const {data} = useApi(`/devices/${emailF}`)
+   
 
     const del = (id)=>{
         deleteRegistro(id)
@@ -31,7 +33,23 @@ const AdmDevices = ()=>{
         window.location.reload();
     }
 
+    const status = (id)=>{
+        habilita(id)
+        window.location.reload();
+    }
+
     const [escolha] = useState({
+
+        habilita:{
+            header: 'Habilitar Device?',
+            variant: 'danger',
+            label: 'Ok',
+            mostraBody: true,
+            body: 'Tem certeza que deseja Habilitar este Device?',
+            callback: status
+        },
+
+
         delete:{
             header: 'Confirma exclusão?',
             variant: 'danger',
@@ -71,6 +89,14 @@ const AdmDevices = ()=>{
         setNome(device.nome)
         setDescricao(device.descricao)
         setImagem(device.imagem)
+        
+    }
+
+    const habilita = (id)=>{
+        const habilitaDevice = {
+            "medidas":{"data":"00", "hora":"00"}
+        }
+        putmedidas(id, habilitaDevice)
     }
 
     const editRegDevice = (id, data)=>{
@@ -81,6 +107,10 @@ const AdmDevices = ()=>{
         }
         editRegistro(id, newRegDevice)
     }
+    
+
+
+
 
     return(
         <Container id='root'>
@@ -103,7 +133,8 @@ const AdmDevices = ()=>{
                                 <td>{moment(projeto.data).format('DD-MM-YYYY')}</td>
                                 <td>
                                     <Button variant='info' onClick={()=> manipulaShow(projeto, escolha.edit)}>Editar</Button>&nbsp;&nbsp;
-                                    <Button variant='danger' onClick={()=> manipulaShow(projeto, escolha.delete)}>Deletar</Button>
+                                    <Button variant='danger' onClick={()=> manipulaShow(projeto, escolha.delete)}>Deletar</Button>&nbsp;&nbsp;
+                                    <Button variant='success' onClick={()=> manipulaShow(projeto, escolha.habilita)}>Habilitar</Button>
                                 </td>
                             </tr>)
                     })}

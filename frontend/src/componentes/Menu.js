@@ -79,6 +79,7 @@ const Menu = ()=>{
                             <li><NavLink to='/Medidas'>Medidas</NavLink></li>
                             <li><NavLink to='/Admin'>Administração</NavLink></li>
                             <li><NavLink to='/logout'><LogoutButton/></NavLink></li>
+                         
                         </>
                 )}
                 

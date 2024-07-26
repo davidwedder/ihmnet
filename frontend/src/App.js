@@ -12,6 +12,9 @@ import {LoginForm, SignupForm} from './componentes/autentica/Autenticacao'
 import Produtos from './componentes/Produtos'
 import Footer from './componentes/Footer'
 
+
+
+
 function App( ) { 
   return ( 
   < Router >
@@ -19,7 +22,7 @@ function App( ) {
     <Menu />
     <Footer/>
     < Routes > 
-      < Route path = "/" element = { < Benvindo /> } /> 
+      < Route path = "/" element = { < Benvindo /> } />      
       < Route path = "/produtos" element = { < Produtos />} />
       < Route path = "/medidas" element = { < Medidas /> } /> 
       < Route path = "/medidas/:id" element = { < DetalhesDevice /> } /> 
@@ -28,7 +31,7 @@ function App( ) {
       < Route path = "/cadastro" element = { < SignupForm />} />
       < Route path = "/login" element = { < LoginForm />} />
       < Route path = "/logout" element = { < Logout />} />
-    </ Routes > 
+     </ Routes > 
   </ Router > ); } 
 
 export default App

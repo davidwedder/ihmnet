@@ -27,6 +27,8 @@ const NovoDevice = ()=>{
     const [tipo, setTipo] = useState()
 
     const data = {nome, descricao, email, imagem, tipo}
+   
+
 
     function click (){
         addRegistro(data)

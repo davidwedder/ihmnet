@@ -7,7 +7,9 @@ import NovoDevice from '../componentes/admin/NovoDevice'
 import {useNavigate} from 'react-router-dom'
 import Userfront from '@userfront/react'
 import jwtDecode from 'jwt-decode'
-
+import Dashboard1 from '../componentes/admin/Dashboard/BarChart';
+import Dashboard2 from '../componentes/admin/Dashboard/LineChart';
+import Dashboard3 from '../componentes/admin/Dashboard/PieChart';
 Userfront.init("qbjqg94n")
 
 const Descricao = styled.div`
@@ -29,9 +31,43 @@ const Descricao = styled.div`
         color: yellow;
         font-weight: bold;
     }
+
+    .BarChart{
+        padding-right:14rem;
+        margin-top: 100px
+    }
+
+    .PieChart{
+        padding-left: 40rem;
+        margin-top: -700px
+        
+    }
+    .LineChart{
+        margin-top: -700px
+        
+    }
+
  `;
 
  
+
+function Mycomponent(){
+
+    const grafico1 = {
+        color: 'blue',
+        backgroundColor: 'lightgray',
+        };
+    
+    
+    const grafico2 = {
+        color: 'blue',
+        backgroundColor: 'lightgray',
+        };
+
+}
+
+
+
 const Admin = ({location})=>{
     let navigate = useNavigate();
     useEffect(() => {
@@ -53,7 +89,7 @@ const Admin = ({location})=>{
                 <Descricao>
                     
                 </Descricao>
-            </Container>
+           
             <div>
                 <Tabs defaultActiveKey="devices" id="tab1" className="mb-1">
                     <Tab eventKey="devices" title="Meus Devices">
@@ -68,8 +104,17 @@ const Admin = ({location})=>{
                     <Tab eventKey="email" title="User Logado">
                         <h5>{userData.email}</h5>
                     </Tab>
+                    <Tab eventKey="dashboard" title="Dashboard">
+                        <div class="BarChart" ><Dashboard1/></div>                       
+                        <div class="LineChart" ><Dashboard2/></div>
+                        <div class="PieChart" ><Dashboard3/></div>                       
+                    </Tab>
+                    <Tab eventKey="map" title="Map">
+                       <></>                        
+                    </Tab>
                 </Tabs>
             </div>
+         </Container>
       </Geral>
     )
 }
