@@ -73,7 +73,6 @@ const Menu = ()=>{
                         <>
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/Produtos'>Produtos</NavLink></li>
-                            <li><NavLink to='/Contato'>Contato</NavLink></li>
                             <li><NavLink to='/login'>Login</NavLink></li>
                             <li><NavLink to='/cadastro'>Cadastro</NavLink></li>
                         </>
