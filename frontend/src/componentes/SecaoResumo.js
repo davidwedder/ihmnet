@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
-import FormContato from "../componentes/FormContato"
+
 const SecaoResumo = ()=>{
     const container = useRef(null)
 
@@ -23,16 +23,14 @@ const SecaoResumo = ()=>{
             <h1>OT & IoT Segurança cibernética do ponto de extremidade até o Air</h1>                        
             </Descricao>
             
-           
+            <Container>
              <div className="container">
                 <div className="container" ref={container}></div>
             </div>                       
-            <FormContato></FormContato>                       
+            </Container>
+
+            
         </Inicio>
-        
-              
-        
-   
     )}
 
     
