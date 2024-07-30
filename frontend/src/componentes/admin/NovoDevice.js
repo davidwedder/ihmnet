@@ -4,19 +4,10 @@ import styled  from 'styled-components'
 import { addRegistro } from '../../services/api';
 
 const StyleForm = styled.div`
-    margin-top: 40px;
-    margin-left: 100px;
-    display: block;
-    width: 900px;
-    padding-left: 12rem;
-    padding-bottom: 2rem;
-    h5{
-        color: white;
-    }
-    h6{
-        color: white;
-        
-    }
+
+    
+  
+  
 `;
 
 const NovoDevice = ()=>{

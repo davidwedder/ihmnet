@@ -24,13 +24,6 @@ function LineChart(){
 
             })}
 
-  
-                 
-    
-
-
-  
-
     return(
     <React.Fragment>
       
@@ -40,8 +33,8 @@ function LineChart(){
        <Chart 
        
        type="area"
-       width={1250}
-       height={200}
+       width={500}
+       height={300}
 
        series={[
               {   name:"Commits",
@@ -50,26 +43,18 @@ function LineChart(){
        ]}
      
        options={ {
-        title:{
-            text:"Humidity",
-            style:{ fontSize:20}
-            },
+        
 
         colors:['#471269'],
         stroke: {width:3, curve:'smooth'},
        
       
       xaxis:{
-          title:{ text:"Data",
-          style:{ fontSize:20, color:'#d8d3db'}
-                },
+         
            categories:[2024,2024,2024,2024,2024,2024]
          },
       yaxis:{
-       title:{
-           text:"Humidity",
-           style:{ fontSize:20}
-           }
+       
       }
        }}          
        >

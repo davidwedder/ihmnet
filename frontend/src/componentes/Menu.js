@@ -11,7 +11,7 @@ Userfront.init("qbjqg94n")
 const StyledNav = Styled.nav`
     background: #050A89;
     color: white;
-    min-height: 10vh;
+    min-height: 8vh;
     height: 70px;
     display: flex;
     margin: auto;
@@ -22,9 +22,9 @@ const StyledNav = Styled.nav`
     border-bottom: 2px solid #EE6B26;
     top: 0;
     z-index: 10;
-
+   
     ul{
-        margin-top: 30px;
+        margin-top: 25px;
         display: flex;
         list-style: none;
     }
@@ -34,6 +34,10 @@ const StyledNav = Styled.nav`
     a{
         color: #95a5e6 ;
         text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif ;
+        font-size: 15px;
+        font
+
         &:hover{
             background-color: #050A89;
             color: #F93D02;
