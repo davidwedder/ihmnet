@@ -33,8 +33,8 @@ function LineChart(){
        <Chart 
        
        type="area"
-       width={500}
-       height={300}
+       width={400}
+       height={250}
 
        series={[
               {   name:"Commits",

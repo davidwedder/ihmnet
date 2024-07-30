@@ -4,7 +4,11 @@ import styled  from 'styled-components'
 import { addRegistro } from '../../services/api';
 
 const StyleForm = styled.div`
-
+    margin-top: 10px;
+    margin-left: 18px;
+    display: block;
+    width: 900px;
+    padding-left: 12rem;
     
   
   

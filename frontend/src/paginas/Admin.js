@@ -10,6 +10,7 @@ import jwtDecode from 'jwt-decode'
 import Dashboard1 from '../componentes/admin/Dashboard/BarChart';
 import Dashboard2 from '../componentes/admin/Dashboard/LineChart';
 import Dashboard3 from '../componentes/admin/Dashboard/PieChart';
+import Dashboard4 from '../componentes/admin/Dashboard/BarChart'
 Userfront.init("qbjqg94n")
 
 const Descricao = styled.div`
@@ -36,15 +37,19 @@ const Descricao = styled.div`
         padding-right:14rem;
         margin-top: 50px
     }
+    .BarChart2{
+       padding-left:35rem;
+       margin-top: -216px;
+    }
 
     .PieChart{
-        
+        padding-left: 5rem;
         
     }
     .LineChart{     
         position:absolute;
         padding-left: 35rem;
-        margin-top: -460px;
+        margin-top: -448px;
         
     }
 
@@ -92,6 +97,7 @@ const Admin = ({location})=>{
                         <div class="BarChart" ><Dashboard1/></div>                       
                         <div class="PieChart" ><Dashboard3/></div>
                         <div class="LineChart" ><Dashboard2/></div>
+                        <div class="BarChart2" ><Dashboard4/></div>
                     </Tab>
                     <Tab eventKey="map" title="Map">
                        <></>                        
