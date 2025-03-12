@@ -35,11 +35,11 @@ const SecaoResumo = ()=>{
 
     
     const Inicio = styled.div`  // Inicio vai substituir a div principal de BenvindoSection
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 10rem;
+    padding: 6rem 10rem;
     color: white;
 `;
 const Descricao = styled.div`  // Aqui iremos colocar em BenvindoSection, uma div para a descrição e o botão

@@ -4,14 +4,12 @@ import styled from 'styled-components'
 import FormContato from '../componentes/FormContato';
 
 const ContStyled = styled.div`
-    padding: 10rem 25rem;
-    color:#8aacdf;
-    min-height: 50vh;
+margin-top: 140px;
 
 `;
 
 const Title = styled.div`
-    margin-bottom: 4rem;
+    
     
 `;
 

@@ -14,6 +14,7 @@ const EstilosGlobais = createGlobalStyle `
         text-decoration: none;
         background-image:url(fundoiot.png);
         background-size:cover;
+        font-size: 12px
     }
 
     button{

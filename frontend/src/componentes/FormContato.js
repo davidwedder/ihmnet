@@ -9,31 +9,21 @@ const Label = styled.div`
 `;
 
 const StyleForm = styled.div`
-    display: block;
-    width: 900px;
-    padding-left: 8rem;
-    padding-bottom: 2rem;
-    
-    h5{
-          color:#8aacdf;
-    }
-    h6{
-        color:#8aacdf;
-        font-weight: bold;
-    }
+   
 
     .ButtonContato{
         font-weight: bold;
         
         cursor: pointer;
-        width: 772px;
-        background: #F93D02;
+       
+        width: auto;
+        background: black;
         color: white;
-        border: 3px solid white;
+        border: 2px solid white;
         border-radius: 3px;
         transition: all 0.5s ease;
         &:hover{
-            background-color: black;
+            background-color: #F93D02;
             color: white;
         }
     }

@@ -32,7 +32,7 @@ class Dashboard extends Component {
               options={this.state.options}
               series={this.state.series}
               type="bar"
-              width="500"
+              width="400"
             />
           </div>
         </div>
